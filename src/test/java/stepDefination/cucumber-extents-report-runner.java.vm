@@ -1,0 +1,61 @@
+#parse("/array.java.vm")
+#if ($packageName)
+package $packageName;
+
+#end
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import stepDefination.ExtentCucumberFormatter;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+import com.remedy.resources.DriverScript;
+import stepDefination.Hooks.AutoReportEmailSender;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        strict = $strict,
+        features = {"$featureFile"},
+        plugin = #stringArray($plugins),
+        monochrome = $monochrome,
+#if(!$featureFile.contains(".feature:") && $tags)
+        tags = #stringArray($tags),
+#end
+        glue = #stringArray($glue))
+public class $className {
+
+ExtentReports extent;
+    ExtentTest test;
+    @BeforeClass
+    public static void beforeClass(){
+      ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+      ExtentCucumberFormatter.loadConfig(new File("extent-config.xml"));
+            ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
+            ExtentCucumberFormatter.addSystemInfo("Browser version", "v31.0");
+            ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.0");
+
+               Map systemInfo = new HashMap();
+               systemInfo.put("Cucumber version", "v1.2.3");
+               systemInfo.put("Extent Cucumber Reporter version", "v1.1.0");
+               ExtentCucumberFormatter.addSystemInfo(systemInfo);
+    }
+
+    @AfterClass
+    public static void afterClass(){
+      if (DriverScript.Config.getProperty("wantToSendReportViaAutoEmail").equalsIgnoreCase("true")){
+      	try
+      	{
+      	AutoReportEmailSender sendReportEmailAutomatically = new AutoReportEmailSender();
+        sendReportEmailAutomatically.autoSendReportMail("aranjan@remedypartners.com", new String[]{"aseem.gupta@intelegencia.com"}, "Test Email:- Automatic Test Automation Report !!");
+        }
+        catch(Exception e)
+        {
+        }
+      }  
+    }
+}

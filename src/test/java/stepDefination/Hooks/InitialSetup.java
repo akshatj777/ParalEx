@@ -8,6 +8,10 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
+import stepDefination.ReportsHandler;
+
+import org.junit.BeforeClass;
+import org.junit.gen5.api.BeforeAll;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,12 +26,9 @@ public class InitialSetup {
 
     private WebDriver driver;
 
-
-
     @Before
     public  void beforeScenario() {
         driver = new DriverScript().getDriver();
-
     }
 
     @After
@@ -38,7 +39,9 @@ public class InitialSetup {
                  byte[] screenshot = ((TakesScreenshot) driver)
                         .getScreenshotAs(OutputType.BYTES);
                 scenario.embed(screenshot, "image/png");
+                
             }
+            ReportsHandler.createReports();
         } finally {
 
             new DriverScript().quitDriver();
