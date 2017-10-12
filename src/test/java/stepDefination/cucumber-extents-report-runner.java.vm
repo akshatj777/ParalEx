@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.Map;
 import com.remedy.resources.DriverScript;
 import stepDefination.Hooks.AutoReportEmailSender;
-import stepDefination.ReportsHandler;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
