@@ -1,0 +1,290 @@
+
+C:\Users\aseem.gupta\Front End\automation\Execution Scripts>call Maven.bat 
+
+C:\Users\aseem.gupta\Front End\automation\Execution Scripts>cd..
+
+C:\Users\aseem.gupta\Front End\automation>mvn clean install test 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Remedy2Application 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Remedy2Application ---
+[INFO] Deleting C:\Users\aseem.gupta\Front End\automation\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Remedy2Application ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\aseem.gupta\Front End\automation\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Remedy2Application ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- cucumber-jvm-parallel-plugin:4.2.0:generateRunners (generateRunners) @ Remedy2Application ---
+[WARNING] The format parameter is deprecated. Please use plugins
+[INFO] Adding C:\Users\aseem.gupta\Front End\automation\target\generated-test-sources\cucumber to test-compile source root
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Remedy2Application ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\aseem.gupta\Front End\automation\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Remedy2Application ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 121 source files to C:\Users\aseem.gupta\Front End\automation\target\test-classes
+[WARNING] /C:/Users/aseem.gupta/Front End/automation/target/generated-test-sources/cucumber/Parallel02IT.java: Some input files use unchecked or unsafe operations.
+[WARNING] /C:/Users/aseem.gupta/Front End/automation/target/generated-test-sources/cucumber/Parallel02IT.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ Remedy2Application ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running Parallel01IT
+Running Parallel02IT
+Running Parallel03IT
+initialize Browser: chrome
+initialize OS: win
+initialize Browser: chrome
+initialize OS: win
+initialize Browser: chrome
+initialize OS: win
+20
+
+1 Scenarios (1 passed)
+16 Steps (16 passed)
+2m8.038s
+
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 131.78 sec - in Parallel03IT
+initialize Browser: chrome
+initialize OS: win
+
+Failed scenarios:
+C:/Users/aseem.gupta/Front End/automation/src/test/Features/Episode2.0/PatientTopNavigation/expandPatientCard.feature:3 # Scenario: verify Expand Patient Card to verify patient summary
+
+1 Scenarios (1 failed)
+46 Steps (1 failed, 30 skipped, 15 passed)
+3m17.693s
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#risk_button"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir11412_2742}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 95a089773c9e853a11c14bfb80406ae9
+*** Element info: {Using=css selector, value=#risk_button}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.remedy.Episode2.PatientsPage.iClickOnOnboardingStatusPresentOnThePatientSummaryPage(PatientsPage.java:205)
+	at stepDefination.Episode2.PatientsPageSteps.i_Click_on_Onboarding_Status_present_on_the_patient_summary_page(PatientsPageSteps.java:288)
+	at ?.When I Click on Onboarding Status present on the patient summary page(C:/Users/aseem.gupta/Front End/automation/src/test/Features/Episode2.0/PatientTopNavigation/expandPatientCard.feature:22)
+
+Tests run: 47, Failures: 0, Errors: 2, Skipped: 30, Time elapsed: 201.339 sec <<< FAILURE! - in Parallel01IT
+When I Click on Onboarding Status present on the patient summary page(Scenario: verify Expand Patient Card to verify patient summary)  Time elapsed: 0.006 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#risk_button"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir11412_2742}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 95a089773c9e853a11c14bfb80406ae9
+*** Element info: {Using=css selector, value=#risk_button}
+
+Scenario: verify Expand Patient Card to verify patient summary  Time elapsed: 0.009 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#risk_button"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir11412_2742}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 95a089773c9e853a11c14bfb80406ae9
+*** Element info: {Using=css selector, value=#risk_button}
+
+20
+initialize Browser: chrome
+initialize OS: win
+20
+
+Failed scenarios:
+C:/Users/aseem.gupta/Front End/automation/src/test/Features/Episode2.0/PatientTopNavigation/patientSummaryActiveEpisode.feature:194 # Scenario Outline: Create a Patient with M3 active episode,no discharge date and verify patient summary
+
+Undefined scenarios:
+C:/Users/aseem.gupta/Front End/automation/src/test/Features/Episode2.0/PatientTopNavigation/patientSummaryActiveEpisode.feature:65 # Scenario Outline: Create a Patient with M2 active episode,no discharge date and verify patient summary
+C:/Users/aseem.gupta/Front End/automation/src/test/Features/Episode2.0/PatientTopNavigation/patientSummaryActiveEpisode.feature:129 # Scenario Outline: Create a Patient with CJR active episode,no episodes in history and verify patient summary
+
+3 Scenarios (1 failed, 2 undefined)
+153 Steps (1 failed, 93 skipped, 2 undefined, 57 passed)
+7m19.406s
+
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"ul.select2-results>li>div#select2-result-label-2"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir8920_12379}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f99922758a8a5eecf5971b1e94cad488
+*** Element info: {Using=css selector, value=ul.select2-results>li>div#select2-result-label-2}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.remedy.Episode2.PatientsPage.iSelectFromTheAdmittingFacilityPresentOnTheAddPatientPage(PatientsPage.java:530)
+	at stepDefination.Episode2.PatientsPageSteps.i_Select_from_the_admitting_facility_present_on_the_Add_Patient_page(PatientsPageSteps.java:761)
+	at ?.And I Select "Coosa valley health care" from the admitting facility present on the Add Patient page(C:/Users/aseem.gupta/Front End/automation/src/test/Features/Episode2.0/PatientTopNavigation/patientSummaryActiveEpisode.feature:160)
+
+
+You can implement missing steps with the snippets below:
+
+@Then("^I enter  \"([^\"]*)\" in the last name text box present on the Add Patient page$")
+public void i_enter_in_the_last_name_text_box_present_on_the_Add_Patient_page(String arg1) throws Throwable {
+    // Write code here that turns the phrase above into concrete actions
+    throw new PendingException();
+}
+
+Tests run: 156, Failures: 0, Errors: 6, Skipped: 93, Time elapsed: 443.02 sec <<< FAILURE! - in Parallel02IT
+And I enter  "ActiveState" in the last name text box present on the Add Patient page(| MTwoPatientA | ActiveState | WA625644286 |)  Time elapsed: 0.006 sec  <<< ERROR!
+cucumber.api.PendingException: TODO: implement me
+
+| MTwoPatientA | ActiveState | WA625644286 |  Time elapsed: 0.006 sec  <<< ERROR!
+cucumber.api.PendingException: TODO: implement me
+
+And I enter  "ActiveState" in the last name text box present on the Add Patient page(| CJRPatientA | ActiveState | WA625644986 |)  Time elapsed: 0 sec  <<< ERROR!
+cucumber.api.PendingException: TODO: implement me
+
+| CJRPatientA | ActiveState | WA625644986 |  Time elapsed: 0.001 sec  <<< ERROR!
+cucumber.api.PendingException: TODO: implement me
+
+And I Select "Coosa valley health care" from the admitting facility present on the Add Patient page(| MThreePatientA | TestMThree | WA625644886 |)  Time elapsed: 0.001 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"ul.select2-results>li>div#select2-result-label-2"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir8920_12379}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f99922758a8a5eecf5971b1e94cad488
+*** Element info: {Using=css selector, value=ul.select2-results>li>div#select2-result-label-2}
+
+| MThreePatientA | TestMThree | WA625644886 |  Time elapsed: 0.002 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"ul.select2-results>li>div#select2-result-label-2"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir8920_12379}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f99922758a8a5eecf5971b1e94cad488
+*** Element info: {Using=css selector, value=ul.select2-results>li>div#select2-result-label-2}
+
+
+Results :
+
+Tests in error: 
+  no such element: Unable to locate element: {"method":"css selector","selector":"#risk_button"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir11412_2742}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 95a089773c9e853a11c14bfb80406ae9
+*** Element info: {Using=css selector, value=#risk_button}
+  no such element: Unable to locate element: {"method":"css selector","selector":"#risk_button"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir11412_2742}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 95a089773c9e853a11c14bfb80406ae9
+*** Element info: {Using=css selector, value=#risk_button}
+  TODO: implement me
+  TODO: implement me
+  no such element: Unable to locate element: {"method":"css selector","selector":"ul.select2-results>li>div#select2-result-label-2"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir8920_12379}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f99922758a8a5eecf5971b1e94cad488
+*** Element info: {Using=css selector, value=ul.select2-results>li>div#select2-result-label-2}
+  no such element: Unable to locate element: {"method":"css selector","selector":"ul.select2-results>li>div#select2-result-label-2"}
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'IITC-WS-QA14', ip: '10.96.97.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a), userDataDir=C:\Users\ASEEM~1.GUP\AppData\Local\Temp\scoped_dir8920_12379}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=61.0.3163.100, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f99922758a8a5eecf5971b1e94cad488
+*** Element info: {Using=css selector, value=ul.select2-results>li>div#select2-result-label-2}
+  TODO: implement me
+  TODO: implement me
+
+Tests run: 184, Failures: 0, Errors: 8, Skipped: 87
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 07:34 min
+[INFO] Finished at: 2017-10-12T15:10:48+05:30
+[INFO] Final Memory: 29M/414M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19:test (default-test) on project Remedy2Application: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Users\aseem.gupta\Front End\automation\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+1.json
+2.json
+3.json

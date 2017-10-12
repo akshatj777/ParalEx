@@ -8,8 +8,6 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
-import stepDefination.ReportsHandler;
-
 import org.junit.BeforeClass;
 import org.junit.gen5.api.BeforeAll;
 import org.openqa.selenium.OutputType;
@@ -41,7 +39,6 @@ public class InitialSetup {
                 scenario.embed(screenshot, "image/png");
                 
             }
-            ReportsHandler.createReports();
         } finally {
 
             new DriverScript().quitDriver();

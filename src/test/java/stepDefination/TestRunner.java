@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 import org.junit.runner.RunWith;
 import stepDefination.Hooks.*;
-import stepDefination.ReportsHandler;
 /**
  * Created by salam on 7/29/15.
  */
@@ -72,7 +71,6 @@ public class TestRunner {
                testReportFinal.generateFeatureOverviewReport();
                 testReportFinal.testGenerateDetailedAggregatedReport();
                 testReportFinal.generateCoverageOverviewReport();*/
-        	ReportsHandler.createReports();
                 if (DriverScript.Config.getProperty("wantToSendReportViaAutoEmail").equalsIgnoreCase("true")){
                         //System.out.println("control should move here only if I want to send email- cheers !!");
                         AutoReportEmailSender sendReportEmailAutomatically = new AutoReportEmailSender();
