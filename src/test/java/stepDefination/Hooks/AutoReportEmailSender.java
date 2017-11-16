@@ -6,7 +6,7 @@ package stepDefination.Hooks;
 
 import com.remedy.resources.DriverScript;
 
-import stepDefination.ExtentCucumberFormatter;
+
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -116,7 +116,8 @@ public class AutoReportEmailSender {
 
             // Add the attachment
             messageBodyPart = new MimeBodyPart();
-            DataSource source = new FileDataSource(System.getProperty("user.dir") +"\\"+ ExtentCucumberFormatter.ReportPath+"\\report.html");
+            //DataSource source = new FileDataSource(System.getProperty("user.dir") +"\\"+ ExtentCucumberFormatter.ReportPath+"\\report.html");
+            DataSource source = new FileDataSource(System.getProperty("user.dir") +"\\"+ "\\report.html");
             messageBodyPart.setDataHandler(new DataHandler(source));
             messageBodyPart.setFileName(dateFormat.format(new Date())+"_report.html");
             messMultipart.addBodyPart(messageBodyPart);

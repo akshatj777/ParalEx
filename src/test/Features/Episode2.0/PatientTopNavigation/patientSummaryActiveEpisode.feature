@@ -21,7 +21,7 @@ Scenario Outline: Create a Patient with M2 active episode,no discharge date and 
     And I switch to Add Patient embedded iframe
     Then I verify "Patient Information" text is present on the add patient page
     Then I enter "<First name>" in the first name text box present on the Add Patient page
-    And I enter  "<Last name>" in the last name text box present on the Add Patient page
+    And I enter "<Last name>" in the last name text box present on the Add Patient page
     And I enter date of birth "01/05/2011" present on the Add Patient Page
     And I wait for 4000 milli seconds
     And I selected "Male" from the gender drop down list present on the Add Patient page
@@ -85,7 +85,7 @@ Scenario Outline: Create a Patient with M2 active episode,no discharge date and 
     And I switch to Add Patient embedded iframe
     Then I verify "Patient Information" text is present on the add patient page
     Then I enter "<First name>" in the first name text box present on the Add Patient page
-    And I enter  "<Last name>" in the last name text box present on the Add Patient page
+    And I enter "<Last name>" in the last name text box present on the Add Patient page
     And I enter date of birth "01/05/2011" present on the Add Patient Page
     And I wait for 4000 milli seconds
     And I selected "Male" from the gender drop down list present on the Add Patient page
